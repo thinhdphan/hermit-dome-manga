@@ -1,0 +1,101 @@
+body {
+  background: -webkit-linear-gradient(-135deg, #6b889a, #626881);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter";
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(224, 232, 245);
+  padding: 12em 16em;
+  border: none;
+  border-radius: 1em;
+
+}
+
+
+
+#emailInp, #passwordInp, #uFirstName, #uLastName {
+  display: flex;
+  width: 12rem;
+  padding: 0.5rem;
+  padding-bottom: 0.65rem;
+  border: none;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  outline: none;
+  background-color: #c0d3de;
+  color: #545b77;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  margin-left: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-family: "Times New Roman";
+  font-size: 0.85em;
+  color: #33425b;
+}
+
+.login-title {
+  font-family: "Inter";
+  font-size: 1.8rem;
+  color: #33425b;
+  margin-bottom: 3rem;
+  margin-top: -6rem;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+
+.login-title:hover {
+  color: #607495;
+}
+
+#register-user, .home-btn {
+  display: block;
+  padding: 0.6rem 3rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #bec2d3;
+  color: #33425b;
+  font-family: "Inter";
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.home-btn {
+  margin-left: 1rem;
+  padding: 0.6rem 3.77rem;
+}
+
+#register-user:hover, .home-btn:hover {
+  background-color: #545b77;
+  color: rgb(220, 228, 238);
+  cursor: pointer;
+}
+
+.register-btns {
+  margin-top: 2rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
