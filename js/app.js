@@ -1,5 +1,5 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-  import { getDatabase, set, ref, get, child } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+  import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
   import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 
   const firebaseConfig = {
@@ -29,14 +29,14 @@
     signInWithEmailAndPassword(auth, emailInp.value, passInp.value).then((credentials) => {
       get(child(dbref, 'UsersAuthList/' + credentials.user.uid)).then((snapshot) => {
         if(snapshot.exists){
-          localStorage.setItem("user-info", JSON.stringify({
+          sessionStorage.setItem("user-info", JSON.stringify({
             firstname: snapshot.val().firstname,
             lastname: snapshot.val().lastname
           }))
-          localStorage.setItem("user-creds", JSON.stringify(credentials.user));
-          window.location.href='manga.html';
+          sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
         }
       })
+      window.location.href = 'main.html';
     })
     .catch((error) => {
       alert('incorrect user/password!');

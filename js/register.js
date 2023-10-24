@@ -22,7 +22,7 @@ let emailInput = document.getElementById('emailInp');
 let passInput = document.getElementById('passwordInp');
 let firstNameInput = document.getElementById('uFirstName');
 let lastNameInput = document.getElementById('uLastName');
-let registerBtn = document.getElementById('register-user');
+let mainForm = document.getElementById('mainForm');
 
 
 // Register User
@@ -43,4 +43,4 @@ let RegisterUser = event => {
 
 }
 
-registerBtn.addEventListener('click', RegisterUser); 
+mainForm.addEventListener('submit', RegisterUser); 
